@@ -1,4 +1,13 @@
-/*Test an h1 tag to confirm the file is linked.*/
-h1{
-    color: deeppink
+body{
+    background-color: silver;
+}
+
+/*Center Bootswatch theme Cerulean Card*/
+.card{
+    margin: 40px auto;
+}
+
+
+h4.card-title{
+    text-align: center;
 }
