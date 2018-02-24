@@ -9,10 +9,11 @@ To play the game:
 Press any letter key.
 If it matches the computer's choice you win.
 
-You have 9 guesses. Each time you are wrong, you lose a guess.
+You have **9** guesses. Each time you are wrong, you lose a guess.
 
 Guess wrong 9 times and you lose the game.
+
 *After a loss, the game will restart with 9 guesses.*
 
-If you guess correctly, then you win the game and you get to start
+If you guess correctly, then you **WIN** the game and you get to start
 again with 9 guesses.
