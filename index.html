@@ -6,29 +6,93 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Psychic Game</title>
 
-
-        <!-- Bootswatch Link to Cerulean Theme -->
-        <link href="https://maxcdn.bootstrapcdn.com/bootswatch/4.0.0-beta.3/cerulean/bootstrap.min.css" rel="stylesheet" integrity="sha384-SJRp3lIuvy82g2roYNoSMWGEf7ufogthbl9noRHbJIxsMPcFl6NEi5fO3PuYptFv" crossorigin="anonymous">
-
         <!-- Add link to game style.css -->
         <link rel="stylesheet" href="./assets/css/style.css">
 
+         <!--Add link to external javascript file -->
+       <!--  <script type="text/javascript" src="./assets/javascript/game.js"></script> -->
+
 </head>
 <body>
-    <!--Add link to external javascript file -->
-        <script src="./assets/javascript/game.js"></script>
 
-    <!-- Card template from Bootswatch Cerulean theme -->
-                <div class="card text-white bg-dark mb-3" style="max-width: 30rem;">
-                    <div class="card-header">Psychic Game</div>
-                    <div class="card-body">
-                        <h4 class="card-title">Are You Smarter Than A Computer?</h4>
-                        <hr>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                </div>
+     <div id = "game">
+         <p>
+            
+        <p>
+    </div>
+
+ <script type="text/javascript">
+
+//At the start of the game
+
+//Designate computer choices. √
+
+var computerOptions = [
+    "a", "b", "c", "d", "e", "f", "g", "h", "i", "j",
+    "k", "l", "m", "n", "o", "p", "q", "r", "s", "t",
+    "u", "v", "w", "x", "y", "z"];
+
+//Wins = 0 √
+//Losses = 0 √
+//Number of User Guesses Left = 9 √
 
 
+var userWin = 0;
+var userLoss = 0;
+var userGuessesLeft = 9;
+
+//User makes a choice. √
+//Capture userGuess. √
+//Show userGuess.
+
+document.onkeyup = function(event){
+    var userGuess = event.key.toLowerCase();
+    
+    //Computer makes a random choice. √
+    //Capture Computer's choice. √
+
+    var computerGuess = computerOptions[Math.floor(Math.random()*computerOptions.length)];
+
+    //Compare user's choice to the computer's choice. √
+
+    //If the Result is a Win:
+    //Add 1 to the userWin.
+    //Reset userGuess to 9
+    //Restart the game w/o refreshing the page.
+
+    //If the Result is a Loss:
+    //Subtract 1 from userGuess.
+    //Add 1 to userLoss.
+    //If userGuess = 0, then restart the game w/o a page refresh.
+
+ 
+    if (computerGuess === userGuess) { userWin++, (userGuessesLeft=9);
+    } else { userGuessesLeft--;
+    }
+
+    if (userGuessesLeft === 0) { userLoss++, (userGuessesLeft=9);
+    }
+
+        
+
+//Display the Result to the User.
+//Game start: "Guess what Letter I'm thinking of?"√
+
+var html = "<h1>Guess What Letter I'm Thinking Of?<h1>" +
+"<p>You chose: " + userGuess + "</p>" +
+"<p>The computer chose: " + computerGuess + "</p>" +
+"<p>Guesses:  " + userGuessesLeft + "</p>" +
+"<p>Wins:  " + userWin + "</p>" +
+"<p>Losses:  " + userLoss + "</p>";
+
+// Set the inner HTML contents of the #game div to our html string
+document.querySelector("#game").innerHTML = html;
+
+};
+
+
+
+</script>
 </body>
 
 </html>

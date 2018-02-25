@@ -2,10 +2,12 @@
 **Week 2 Javascript Homework**
 
 Are **YOU** a Psychic? Can **YOU** beat the Computer?
+
 The objective of this homework is to create a game where the
 player guesses the letter that the computer has picked.
 
-To play the game:
+**To Play The Game:**
+
 Press any letter key.
 If it matches the computer's choice you win.
 
