@@ -1,10 +1,30 @@
+/*Add styles to Bootswatch theme to improve general appearance*/
 
-h1{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-size: 24px;
-    color: deeppink;
+body{
+    background-color: silver;
+}
+
+h5{
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 40px;
 }
 
 p{
-    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+    font-size: 20px;
+    font-weight: 400;
+    color: white;
+    text-align: left;
+    padding: 0px 10px;
+}
+
+/*Center Bootswatch theme Cerulean Card*/
+.card{
+    margin: 40px auto;
+}
+
+
+h4.card-title{
+    text-align: center;
 }

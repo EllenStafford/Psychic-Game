@@ -53,7 +53,7 @@ document.onkeyup = function(event){
 //Display the Result to the User. √
 //Game start: "Guess what Letter I'm thinking of?"√
 
-var html = "<h1>Guess What Letter I'm Thinking Of?<h1>" +
+var html = "<h5>Guess What Letter I'm Thinking Of?<h5>" +
 "<p>You chose: " + userGuess + "</p>" +
 "<p>The computer chose: " + computerGuess + "</p>" +
 "<p>Guesses:  " + userGuessesLeft + "</p>" +
